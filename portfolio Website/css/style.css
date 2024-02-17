@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap');
+
+:root {
+    --color-body: #b6cbce;
+    --color-heading: #eef3db;
+    --color-base: #033f47;
+    --color-base2: #022a30;
+    --color-brand: #e0f780;
+    --color-brand2: #deff58;
+    --sidbar-width: 240px;
+    --font-base: "Bai Jamjuree";
+}
+
+body {
+    background-color: var(--color-base2);
+    color: var(--color-body);
+    font-family: var(--font-base), sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: var(--color-heading);
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-body);
+    transition: all 0.4s ease;
+}
+
+a:hover {
+    color: var(--color-brand);
+}
+
+img{
+    width: 100%;
+}
+
+.full-height{
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.text-brand{
+    color: var(--color-brand);
+}
+
+
+
+.navbar .nav-link{
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #d40c0c;
+}
+
+.navbar .nav-link.active{
+    color: var(--color-brand);
+}
+
+
+.navbar{
+    background-color: var(--color-base);
+}
+
+
+@media (min-width:996px){
+    .navbar{
+        min-height: 100vh;
+        width: var(--sidbar-width);
+        background: linear-gradient(rgba(3, 63, 71, 0.7),rgba(3, 63, 71, 0.7)), url(/image/Purple\ Pink\ Modern\ Virtual\ Zoom\ Background.png);
+        background-size: cover;
+        /* background-position: center; */
+    }
+
+    .navbar-brand img{
+        border: 6px solid var(--color-brand);
+    }
+
+    #content-wrapper{
+        padding-left: var(--sidbar-width);
+    }
+
+}
+
+.btn{
+    padding: 12px 28px;
+    font-weight: 700;
+}
+
+.btn-brand{
+    background-color: var(--color-brand);
+    border-color: var(--color-brand);
+    border-color: var(--color-brand);
+}
+
+.btn-brand:hover,
+.btn-brand:focus{
+    background-color: var(--color-brand2);
+    color: var(--color-base);
+    border-color: var(--color-brand2);
+}
+
+.link-custom{
+    font-weight: 700;
+    position: relative;
+}
+
+.link-custom::after{
+   content: "";
+   width: 0%;
+   height: 2px;
+   background-color: var(--color-brand);
+   position: absolute;
+   left: 0;
+   top: 110%;
+   transition: all 0.4s; 
+}
+
+.link-custom:hover::after{
+    width: 100%;
+}
+
+.bg-base{
+    background-color: var(--color-base);
+}
+
+.shadow-effect{
+    transition: all 0.4s;
+}
+
+.shadow-effect:hover{
+    box-shadow: -6px 6px 0 0px var(--color-brand);
+}
+
+.iconbox{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    background-color: var(--color-brand);
+    color: var(--color-base);
+}
+
+.card-custom .card-custom-image{
+    overflow: hidden;
+}
+
+.card-custom .card-custom-image img{
+    transition: all 0.4s;
+}
+
+.card-custom .card-custom-image img:hover{
+    transform: scale(1.1);
+}
+
+#contact .form-control{
+    background-color: var(--color-base);
+    border-color: var(--color-base);
+    color: var(--color-body);
+}
+
+#contact .form-control:hover{
+    border-color: var(--color-brand);
+}
+
+#contact .form-control::placeholder{
+    color: var(--color-body);
+}
+
+#contact input.form-control{
+    height: 44px;
+}
+
+.social-link a{
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-base);
+    border-radius: 100px;
+    font-size: 24px;
+
+}
+
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container1 {
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    flex-wrap: wrap;
+    gap: 80px 100px;
+    overflow: hidden;
+    background: var(--color-base2);
+}
+
+.box {
+    position: relative;
+    width: 240px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 100%;
+    background: linear-gradient(#fff, #fff, #e3e3e3);
+    filter: blur(1px);
+    z-index: 1;
+}
+
+.box::after {
+    content: '';
+    position: absolute;
+    top: 1px;
+    right: -1px;
+    width: 20px;
+    height: 100%;
+    background: #9d9d9d;
+    filter: blur(1px);
+    z-index: 1;
+}
+
+.box .shadow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #eee;
+}
+
+.box .shadow::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: calc(100% + 5px);
+    width: 100%;
+    height: 200%;
+    background: linear-gradient(rgba(0, 0, 0, 0.075), transparent);
+    transform: skewX(45deg);
+}
+
+.box .shadow::after {
+    content: '';
+    position: absolute;
+    bottom: -200%;
+    left: calc(100% + 15px);
+    width: 100%;
+    height: 200%;
+    background: linear-gradient(rgba(0, 0, 0, 0.075), transparent);
+    transform: skewX(45deg);
+}
+
+.box .content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#dbdae1, #a3aaba);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1),
+        15px 15px 15px rgba(0, 0, 0, 0.1),
+        20px 20px 20px rgba(0, 0, 0, 0.1),
+        50px 50px 50px rgba(0, 0, 0, 0.1),
+        inset 3px 3px 2px #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box .content .percent {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.box .content .percent::before {
+    content: attr(data-text);
+    position: absolute;
+    inset: 20px;
+    background: #555;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 1.75rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+}
+
+.box .content .percent svg {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform: rotate(270deg);
+}
+
+.box .content .percent svg circle {
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke-width: 3;
+    stroke: rgba(0, 0, 0, 0.05);
+    transform: translate(5px, 5px);
+}
+
+.box .content .percent svg circle:nth-child(2) {
+    stroke: var(--color-brand);
+    stroke-dasharray: 440;
+    stroke-dashoffset: calc(440 - (440 * var(--num)) / 100);
+    opacity: 0;
+    animation: fadeIn 1s linear forwards;
+    animation-delay: 2.5s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.box .content .percent .dot {
+    position: absolute;
+    inset: 5px;
+    z-index: 10;
+    animation: animateDot 2s linear forwards;
+}
+
+@keyframes animateDot {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(calc(3.6deg * var(--num)));
+    }
+}
+
+.box .content .percent .dot::before {
+    content: '';
+    position: absolute;
+    top: -7px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 14px;
+    height: 14px;
+    background: var(--color-brand);
+    border-radius: 50%;
+}
+
+.box .content .number {
+    position: relative;
+    inset: 0;
+    opacity: 0;
+    animation: fadeIn 1s linear forwards;
+    animation-delay: 2.5s;
+}
+
+.box .content .number h2 {
+    font-size: 2.5rem;
+    color: var(--color-brand);
+}
+
+.box .content .number h2 span {
+    font-weight: 300;
+    font-size: 1.5rem;
+}
